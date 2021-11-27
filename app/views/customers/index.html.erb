@@ -1,0 +1,22 @@
+<h2>Listado de cliente<h2>
+
+<table class="table">
+  <thead>
+    <tr>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <% @customers.each do |customer| %>
+      <td><%= link_to customer.name, customer_path(customer) %></td>
+      <td><%=customer.email %></td>
+      <td><%=customer.phone %><td>
+      <td><%=customer.status %><td>
+      <td><%=customer.date %><td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to 'crear nuevo cliente', new_customer_path %>

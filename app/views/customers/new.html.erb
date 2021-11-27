@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+
+      <h2>Agregar nuevo cliente<h2>
+
+      <%= simple_form_for(@customer) do |f| %>
+        <%= f.input :name, label: "Nombre" %>
+        <%= f.input :email, label: "Correo Electronico" %>
+        <%= f.input :phone, label: "Numero de Telefono" %>
+        <%= f.input :status, label: "Estatus" %>
+        <%= f.input :date, label: "Fecha de ingreso" %>
+        <%= f.input :message, label: "Conversaciones" %>
+        <%= f.submit %>
+      <% end %>
+
+    </div>
+  </div>
+</div>

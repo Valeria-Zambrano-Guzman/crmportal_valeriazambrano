@@ -1,0 +1,12 @@
+<h2> Perfil del cliente<h2>
+
+<h1><%= @customer.name  %><h1>
+<p><%= @customer.email %></p>
+<p><%= @customer.phone %></p>
+<p><%= @customer.status %></p>
+<p><%= @customer.date %></p>
+<p><%= @customer.message %></p>
+
+<%= link_to 'Volver', customers_path %>
+<%= link_to 'Editar', edit_customer_path(@customer) %>
+<%= link_to 'Borrar', customer_path(@customer), method: :delete, data: { confirm: "estas seguro?" } %>
